@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,127 @@
     <link rel="stylesheet" href="CSS/main.css">
     <title>MEME-GENERATOR</title>
 </head>
-<body>
-    <header>MEME-GENERATOR🎭</header>
-    <section class="editor-container"></section>
-    <section class="img-gallery"></section>
+
+<body onload="init()">
+    <div class="shadow-screen" onclick="toggleMobileNavList()"></div>
+
+    <header class="main-header">
+        <div class="main-header-container">
+            <div class="logo">MEME-GENERATOR🎭</div>
+            <!-- <nav class="main-nav"> -->
+            <ul class="main-nav-list">
+                <li><a class="nav" href="#" onclick="openGallery()">Gallery</a>
+                </li>
+                <li><a class="nav" href="#" onclick="openMemeGallery()">Memes</a>
+                </li>
+                <li><a class="nav" href="#" onclick="openEditor()">Meme Editor</a>
+                </li>
+                <li><a class="nav" href="#" onclick="openAbout()">About</a>
+                </li>
+            </ul>
+            <!-- </nav> -->
+            <button class="btn-mobile-nav-list" onclick="toggleMobileNavList()">☰</button>
+        </div>
+    </header>
+    <hr>
+
+    <section class="meme-gallery-container close">
+    </section>
+
+    <section class="about-container close">
+        <img src="img/aboutimg.PNG" class="about-img">
+    </section>
+
+    <section class="editor-container close">
+        <section class="canvas-container">
+            <canvas id="my-canvas" height="350" width="350" class="main-canvas"></canvas>
+        </section>
+        <section class="control-box">
+            <input class="txt-input" type="text" name="meme-txt" oninput="setLineTxt(this.value)">
+
+            <section class="main-btn-container">
+                <button onclick="switchLines()" class="switch-line-btn">
+                    <img src="img/arrow_up.png" class="arrow-up">
+                    <img src="img/arrow_down.png" class="arrow-down">
+                </button>
+                <button onclick="addLine()" class="add-line-btn">+</button>
+                <button onclick="deleteLine()" class="delete-line-btn">
+                    <img src="img/garbage.png" class="delete-img">
+                </button>
+            </section>
+
+            <section class="secondary-btn-container">
+                <section class="txt-btn">
+                    <button onclick="setLineSize(4)" class="font-size-btn"><span class="A-span">A+</span></button>
+                    <button onclick="setLineSize(-4)" class="font-size-btn"><span class="A-span">A-</span></button>
+                    <button class="align-btn" onclick="setAlignLeft()">
+                        <img src="img/Rectangle_4_copie_3.png" width="30" height="26" class="align-btn-img"></button>
+                    <button class="align-btn" onclick="setAlignCenter()">
+                        <img src="img/Rectangle_4_copie_4.png" width="30" height="26" class="align-btn-img"></button>
+                    </button>
+                    <button class="align-btn" onclick="setAlignRight()">
+                        <img src="img/Rectangle_4_copie_5.png" width="30" height="26" class="align-btn-img"></button>
+                    </button>
+                </section>
+
+                <section class="third-btn-container">
+                    <section class="font-filter">
+                        <select class="filter-font-select" onchange="setFontStyle(this.value)">
+                            <option value="Impact">Impact</option>
+                            <option value="serif">serif</option>
+                        </select>
+                    </section>
+                    <input class="color-picker" type="color" id="colorpicker" value="black"
+                        oninput="setLineColor(this.value)">
+                    <input class="filler-color-picker" type="color" id="fillercolorpicker" value="#ffffff"
+                        oninput="setFillColor(this.value)">
+                    <button class="save-btn" onclick="saveMeme()"><span class="save-span">s</span></button>
+                </section>
+            </section>
+
+            <div class="stickers">
+                <a href="#" onclick="insertSticker(this)">🌜</a>
+                <a href="#" onclick="insertSticker(this)">🐍</a>
+                <a href="#" onclick="insertSticker(this)">🗡️</a>
+                <a href="#" onclick="insertSticker(this)">🤸‍♂️</a>
+                <a href="#" onclick="insertSticker(this)">😎</a>
+                <a href="#" onclick="insertSticker(this)">😂</a>
+                <a href="#" onclick="insertSticker(this)">👣</a>
+                <a href="#" onclick="insertSticker(this)">😍</a>
+                <a href="#" onclick="insertSticker(this)">⚽</a>
+                <a href="#" onclick="insertSticker(this)">😈</a>
+                <a href="#" onclick="insertSticker(this)">🤪</a>
+            </div>
+
+            <section class="fourth-btn-container">
+                <button class="upload-btn" onclick="uploadImg()">Upload</button>
+                <a href="#" class="share-btn" onclick="alert('You must upload MEME first!')">
+                    <img src="img/icons8-connect-64.png" class="share-img">
+
+                    Share</a>
+            </section>
+        </section>
+    </section>
+    <section class="gallery-container">
+        <section class="img-filter">
+            <select class="filter-label-select" onchange="onSetFilterBy({label: this.value})"></select>
+        </section>
+        <div class="gallery-secondary-container">
+            <button class="ran-meme-btn" onclick="genRanMeme()">I'm flexible</button>
+        </div>
+        <hr>
+        <div class="img-gallery">
+        </div>
+    </section>
 </body>
+<script src="JS/utils.js"></script>
+<script src="JS/storageService.js"></script>
+<script src="JS/galleryService.js"></script>
+<script src="JS/memeGalleryService.js"></script>
 <script src="JS/memeService.js"></script>
+<script src="JS/homePageController.js"></script>
+<script src="JS/galleryController.js"></script>
+<script src="JS/memeGalleryController.js"></script>
 <script src="JS/memeController.js"></script>
+
 </html>

@@ -1,0 +1,10 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img {
+    max-height: 400px;
+    max-width: 400px;
+}

@@ -1,0 +1,28 @@
+.meme-gallery-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+    gap: 4px;
+    margin: auto;
+}
+
+.line1 {
+    position: absolute;
+    top: 12.5%;
+}
+
+.line2 {
+    position: absolute;
+    top: 87.5%;
+}
+
+.meme-container{
+    height: 300px;
+    width: 300px;
+}
+
+.meme-canvas{
+    position: absolute;
+    /* background-color: red; */
+    border: 1px solid black;
+}
