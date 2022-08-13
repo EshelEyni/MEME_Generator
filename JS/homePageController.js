@@ -13,11 +13,9 @@ gCtx = gElCanvas.getContext('2d')
 function init() {
     window.addEventListener('resize', resizeCanvas)
     window.addEventListener('resize', resizeMemeCanvas())
-    addListeners()
     renderGallery(getImgsForDisplay())
     renderLabels()
 }
-
 
 
 function openEditor() {

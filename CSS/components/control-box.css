@@ -27,8 +27,8 @@
 
 .main-btn-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 10px;
     justify-content: center;
     z-index: 10;
     margin: 10px;
@@ -174,8 +174,51 @@
 }
 
 
-.add-line-btn{
-    
+.add-line-btn {
+    /* Style for "Rectangle" */
+    width: 58px;
+    height: 53px;
+    box-shadow: 1px 5px 0 #015d33, inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    border-radius: 10px;
+    background-color: #ebeef3;
+    background-image: linear-gradient(-38deg, #42eb5c 0%, #37b34a 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow: 1px 3px 0 rgba(1, 93, 51, 0.61);
+    color: #ebeef3;
+    font-family: "Poppins - Semi Bold";
+    font-size: 51px;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.delete-line-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    width: 58px;
+    height: 53px;
+    box-shadow: 1px 5px 0 #8c0606, inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    border-radius: 10px;
+    background-color: #ebeef3;
+    background-image: linear-gradient(-38deg, #cf1d37 0%, #cf1d37 1%, #f05036 100%);
+}
+
+.delete-img {
+    /* Style for "Forme 4" */
+    width: 28px;
+    height: 32px;
+    /* box-shadow: 1px 3px 0 1px rgba(140, 6, 6, 0.61); */
+    /* background-color: #ebeef3; */
+    border-radius: 0;
 }
 
 .color-picker {

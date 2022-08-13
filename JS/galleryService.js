@@ -34,14 +34,10 @@ function getLabels() {
 
 function setImgFilter(filterBy = {}) {
     if (filterBy.label !== undefined) gFilterBy.label = filterBy.label
-    // if (filterBy.minSpeed !== undefined) gFilterBy.minSpeed = filterBy.minSpeed
     return gFilterBy
 }
 
 function getImgsForDisplay() {
     var imgs = gImgs.filter(img => img.keywords.join().includes(gFilterBy.label))
-
-    // const startIdx = gPageIdx * PAGE_SIZE
-    // cars = cars.slice(startIdx, startIdx + PAGE_SIZE)
     return imgs
 }

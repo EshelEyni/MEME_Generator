@@ -11,15 +11,38 @@ img {
     border-radius: 25px;
 }
 
-.gallery-secondary-container {
-    display: flex;
-    justify-content: center;
+.filter-label-select {
+    /* Style for "Rectangle" */
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    width: 541px;
+    height: 58px;
+    border-radius: 15px;
+    background-color: #22252c;
+    color: white;
+    font-size: 1.25rem;
+
 }
 
 .ran-meme-btn {
-    height: 45px;
-    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    width: 240px;
+    height: 58px;
+    border-radius: 15px;
+    background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
+    color: white;
+    font-size: 1.25rem;
 }
+
+.gallery-secondary-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 hr {
     height: 1px;
