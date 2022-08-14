@@ -1,18 +1,28 @@
-
-const elGallery = document.querySelector('.gallery-container')
-const elImgGallery = document.querySelector('.img-gallery')
-const elEditorContainer = document.querySelector('.editor-container')
-const elMemeGallery = document.querySelector('.meme-gallery-container')
-const elAbout = document.querySelector('.about-container')
-const elTxtInput = document.querySelector('.txt-input')
-const elMainNavList =  document.querySelector('.main-nav-list')
-const elShadowScreen = document.querySelector('.shadow-screen')
-gElCanvas = document.getElementById('my-canvas')
-gCtx = gElCanvas.getContext('2d')
+var elGallery 
+var elImgGallery 
+var elEditorContainer 
+var elMemeGallery 
+var elAbout 
+var elTxtInput 
+var elTxtInputFont 
+var elMainNavList 
+var elShadowScreen
 
 function init() {
+    elGallery = document.querySelector('.gallery-container')
+    elImgGallery = document.querySelector('.img-gallery')
+    elEditorContainer = document.querySelector('.editor-container')
+    elMemeGallery = document.querySelector('.meme-gallery-container')
+    elAbout = document.querySelector('.about-container')
+    elTxtInput = document.querySelector('.txt-input')
+    elTxtInputFont = document.querySelector('.filter-font-select')
+    elMainNavList = document.querySelector('.main-nav-list')
+    elShadowScreen = document.querySelector('.shadow-screen')
+    gElCanvas = document.getElementById('my-canvas')
+    gCtx = gElCanvas.getContext('2d')
     window.addEventListener('resize', resizeCanvas)
     window.addEventListener('resize', resizeMemeCanvas())
+    renderStickers()
     renderGallery(getImgsForDisplay())
     renderLabels()
 }
@@ -52,7 +62,7 @@ function openMemeGallery() {
     renderMemeGallery(gSavedMemes)
 }
 
-function toggleMobileNavList(){
+function toggleMobileNavList() {
     elMainNavList.classList.toggle('reveal')
     elShadowScreen.classList.toggle('reveal')
 }

@@ -1,24 +1,21 @@
 .control-box {
     position: relative;
     margin-inline-start: 80px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     width: 40%;
-    /* flex: 1; */
-    /* box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #ffffff; */
+    min-height: 445px;
     border-radius: 30px;
-    /* background-color: #ebeef3; */
     border: 1px solid white;
-
 }
 
 .txt-input {
     position: relative;
+    margin-top: 20px;
     height: 10%;
     border-radius: 25px;
     width: 90%;
     box-shadow: 0px 2px 0 #bbc4d1, inset 10 5px 0 #ffffff;
     padding: 0;
-    padding-inline-start: 15px;
     font-size: 1rem;
     margin: 4.5%;
     margin-top: 5px;
@@ -67,20 +64,49 @@
 
 }
 
-.stickers {
-    position: relative;
+.main-stickers-container {
     display: flex;
-    margin-inline-start: 20px;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5px;
+    margin: auto;
 }
 
-.stickers>a {
+.stickers-container {
+    /* position: relative; */
+    /* margin: auto; */
+    width: 215px;
+    height: 45px;
+    padding: 2.5px;
+    border-radius: 45px;
+    background-color: #ffffff;
+    display: flex;
+    gap: 2.5px;
+}
+
+.stickers-container>a {
     list-style-type: none;
     text-decoration: none;
     font-size: 30px;
     width: auto;
 
 }
+
+.scroll-stickers-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    width: 35px;
+    height: 35px;
+}
+
+.scroll-img{
+    border-radius: 0;
+    height: 14px;
+    width: 10px;
+ }
 
 .txt-btn {
     display: flex;

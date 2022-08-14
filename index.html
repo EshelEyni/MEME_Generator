@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="assets/logo.png">
     <title>MEME-GENERATOR</title>
 </head>
 
@@ -78,7 +79,7 @@
                             <option value="serif">serif</option>
                         </select>
                     </section>
-                    <input class="color-picker" type="color" id="colorpicker" value="black"
+                    <input class="color-picker" type="color" id="colorpicker" value="#000000"
                         oninput="setLineColor(this.value)">
                     <input class="filler-color-picker" type="color" id="fillercolorpicker" value="#ffffff"
                         oninput="setFillColor(this.value)">
@@ -86,19 +87,16 @@
                 </section>
             </section>
 
-            <div class="stickers">
-                <a href="#" onclick="insertSticker(this)">🌜</a>
-                <a href="#" onclick="insertSticker(this)">🐍</a>
-                <a href="#" onclick="insertSticker(this)">🗡️</a>
-                <a href="#" onclick="insertSticker(this)">🤸‍♂️</a>
-                <a href="#" onclick="insertSticker(this)">😎</a>
-                <a href="#" onclick="insertSticker(this)">😂</a>
-                <a href="#" onclick="insertSticker(this)">👣</a>
-                <a href="#" onclick="insertSticker(this)">😍</a>
-                <a href="#" onclick="insertSticker(this)">⚽</a>
-                <a href="#" onclick="insertSticker(this)">😈</a>
-                <a href="#" onclick="insertSticker(this)">🤪</a>
-            </div>
+            <section class="main-stickers-container">
+                <button class="scroll-stickers-btn" onclick="onScrollDownSticker()">
+                <img src="img/arrow_left.png" class="scroll-img">
+                </button>
+                <div class="stickers-container">
+                </div>
+                <button class="scroll-stickers-btn" onclick="onScrollUpSticker()">
+                <img src="img/arrow_right.png" class="scroll-img">
+                </button>
+            </section>
 
             <section class="fourth-btn-container">
                 <button class="upload-btn" onclick="uploadImg()">Upload</button>
@@ -121,14 +119,14 @@
         </div>
     </section>
 </body>
-<script src="JS/utils.js"></script>
-<script src="JS/storageService.js"></script>
-<script src="JS/galleryService.js"></script>
-<script src="JS/memeGalleryService.js"></script>
-<script src="JS/memeService.js"></script>
-<script src="JS/homePageController.js"></script>
-<script src="JS/galleryController.js"></script>
-<script src="JS/memeGalleryController.js"></script>
-<script src="JS/memeController.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/storageService.js"></script>
+<script src="js/galleryService.js"></script>
+<script src="js/memeGalleryService.js"></script>
+<script src="js/memeService.js"></script>
+<script src="js/homePageController.js"></script>
+<script src="js/galleryController.js"></script>
+<script src="js/memeGalleryController.js"></script>
+<script src="js/memeController.js"></script>
 
 </html>

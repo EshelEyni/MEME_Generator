@@ -12,7 +12,7 @@ var gMeme = {
             align: 'center',
             color: 'black',
             fillColor: 'white',
-            rect: {x: null, y: null, w: null, h: null},
+            rect: { x: null, y: null, w: null, h: null },
         },
     ]
 }
@@ -28,11 +28,13 @@ function getMeme(img) {
 }
 
 function setLineTxt(text) {
+    if (!gMeme.lines.length) return
     gMeme.lines[gMeme.selectedLineIdx].txt = text
     renderMeme(gCurrImgToMeme.url)
 }
 
 function setFontStyle(text) {
+    if (!gMeme.lines.length) return
     gMeme.lines[gMeme.selectedLineIdx].fontType = text
     renderMeme(gCurrImgToMeme.url)
 }
@@ -80,7 +82,7 @@ function switchLines() {
     if (gMeme.selectedLineIdx > (gMeme.lines.length - 1)) {
         gMeme.selectedLineIdx = 0
     }
-
+    if (!gMeme.lines.length) return
     elTxtInput.value = gMeme.lines[gMeme.selectedLineIdx].txt
 }
 
@@ -88,6 +90,7 @@ function addLine() {
     gMeme.lines.push({
         txt: '',
         size: 50,
+        fontType: elTxtInputFont.value,
         align: 'center',
         color: 'black',
         fillColor: 'white',
@@ -95,6 +98,15 @@ function addLine() {
     })
     gMeme.selectedLineIdx = gMeme.lines.length - 1
     document.querySelector('.txt-input').value = ''
+    renderMeme(gCurrImgToMeme.url)
+}
+
+function deleteLine() {
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+    elTxtInput.value = ''
+    switchLines()
+    if (!gMeme.lines.length) document.querySelector('.txt-input').value = 'Please add a line (+)'
+        renderMeme(gCurrImgToMeme.url)
 }
 
 
@@ -132,3 +144,5 @@ function doUploadImg(imgDataUrl, onSuccess) {
             console.error(err)
         })
 }
+
+

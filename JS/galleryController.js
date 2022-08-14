@@ -55,12 +55,6 @@ function renderLabels() {
 
 
 function onSetFilterBy(filterBy) {
-    // console.log(filterBy);
     filterBy = setImgFilter(filterBy)
     renderGallery(getImgsForDisplay())
-    
-    // const queryStringParams = `?vendor=${filterBy.vendor}&minSpeed=${filterBy.minSpeed}`
-    // const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + queryStringParams
-    // window.history.pushState({ path: newUrl }, '', newUrl)
-
 }

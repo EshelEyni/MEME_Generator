@@ -11,6 +11,10 @@ img {
     border-radius: 25px;
 }
 
+.gallery-secondary-container {
+    display: flex;
+    justify-content: space-between;
+}
 .filter-label-select {
     /* Style for "Rectangle" */
     padding-inline-start: 10px;
@@ -38,10 +42,6 @@ img {
     font-size: 1.25rem;
 }
 
-.gallery-secondary-container {
-    display: flex;
-    justify-content: space-around;
-}
 
 
 hr {
