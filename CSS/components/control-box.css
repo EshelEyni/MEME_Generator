@@ -1,8 +1,6 @@
 .control-box {
     position: relative;
     margin-inline-start: 80px;
-    /* padding-top: 20px; */
-    width: 40%;
     min-height: 445px;
     border-radius: 30px;
     border: 1px solid white;
@@ -16,6 +14,7 @@
     width: 90%;
     box-shadow: 0px 2px 0 #bbc4d1, inset 10 5px 0 #ffffff;
     padding: 0;
+    padding-inline-start: 15px;
     font-size: 1rem;
     margin: 4.5%;
     margin-top: 5px;
