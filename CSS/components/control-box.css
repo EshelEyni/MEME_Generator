@@ -247,6 +247,7 @@
 }
 
 .color-picker {
+    display: none;
     width: 55px;
     height: 50px;
     box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
@@ -256,12 +257,22 @@
 }
 
 .filler-color-picker {
+    display: none;
     width: 55px;
     height: 50px;
     box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
     border-radius: 10px;
     background-color: #ffffff;
     background-color: #ffffff;
+}
+
+.colorpick-eyedropper-input-trigger{
+    display: none;
+}
+
+.color-picker-label{
+    height: 40px;
+    width: 40px;
 }
 
 .save-btn {

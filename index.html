@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="assets/logo.png">
+    <link rel="icon" href="assets/img/icons/favicon.png">
     <title>Meme-Generator</title>
 </head>
 
@@ -37,7 +37,7 @@
     </section>
 
     <section class="about-container close">
-        <img src="img/aboutimg.PNG" class="about-img">
+        <img src="assets/img/aboutimg.PNG" class="about-img">
     </section>
 
     <section class="editor-container close">
@@ -49,12 +49,12 @@
 
             <section class="main-btn-container">
                 <button onclick="switchLines()" class="switch-line-btn">
-                    <img src="img/arrow_up.png" class="arrow-up">
-                    <img src="img/arrow_down.png" class="arrow-down">
+                    <img src="assets/img/icons/arrow_up.png" class="arrow-up">
+                    <img src="assets/img/icons/arrow_down.png" class="arrow-down">
                 </button>
                 <button onclick="addLine()" class="add-line-btn">+</button>
                 <button onclick="deleteLine()" class="delete-line-btn">
-                    <img src="img/garbage.png" class="delete-img">
+                    <img src="assets/img/icons/garbage.png" class="delete-img">
                 </button>
             </section>
 
@@ -63,12 +63,12 @@
                     <button onclick="setLineSize(4)" class="font-size-btn"><span class="A-span">A+</span></button>
                     <button onclick="setLineSize(-4)" class="font-size-btn"><span class="A-span">A-</span></button>
                     <button class="align-btn" onclick="setAlignLeft()">
-                        <img src="img/Rectangle_4_copie_3.png" width="30" height="26" class="align-btn-img"></button>
+                        <img src="assets/img/icons/Rectangle_4_copie_3.png" width="30" height="26" class="align-btn-img"></button>
                     <button class="align-btn" onclick="setAlignCenter()">
-                        <img src="img/Rectangle_4_copie_4.png" width="30" height="26" class="align-btn-img"></button>
+                        <img src="assets/img/icons/Rectangle_4_copie_4.png" width="30" height="26" class="align-btn-img"></button>
                     </button>
                     <button class="align-btn" onclick="setAlignRight()">
-                        <img src="img/Rectangle_4_copie_5.png" width="30" height="26" class="align-btn-img"></button>
+                        <img src="assets/img/icons/Rectangle_4_copie_5.png" width="30" height="26" class="align-btn-img"></button>
                     </button>
                 </section>
 
@@ -79,9 +79,15 @@
                             <option value="serif">serif</option>
                         </select>
                     </section>
-                    <input class="color-picker" type="color" id="colorpicker" value="#000000"
-                        oninput="setLineColor(this.value)">
-                    <input class="filler-color-picker" type="color" id="fillercolorpicker" value="#ffffff"
+                    <label class="color-picker-label" for="color-picker">
+                        <img src="./assets/img/icons/canvas_img.png"/>
+                    </label>
+                    <input class="color-picker" type="color" id="color-picker" name="color-picker" value="#000000"
+                    oninput="setLineColor(this.value)">
+                    <label class="color-picker-label" for="filler-color-picker">
+                        <img src="./assets/img/icons/canvas_img.png"/>
+                    </label>
+                    <input class="filler-color-picker" type="color" id="filler-color-picker" value="#ffffff"
                         oninput="setFillColor(this.value)">
                     <button class="save-btn" onclick="saveMeme()"><span class="save-span">s</span></button>
                 </section>
@@ -89,19 +95,19 @@
 
             <section class="main-stickers-container">
                 <button class="scroll-stickers-btn" onclick="onScrollDownSticker()">
-                <img src="img/arrow_left.png" class="scroll-img">
+                <img src="assets/img/icons/arrow_left.png" class="scroll-img">
                 </button>
                 <div class="stickers-container">
                 </div>
                 <button class="scroll-stickers-btn" onclick="onScrollUpSticker()">
-                <img src="img/arrow_right.png" class="scroll-img">
+                <img src="assets/img/icons/arrow_right.png" class="scroll-img">
                 </button>
             </section>
 
             <section class="fourth-btn-container">
                 <button class="upload-btn" onclick="uploadImg()">Upload</button>
                 <a href="#" class="share-btn" onclick="alert('You must upload MEME first!')">
-                    <img src="img/icons8-connect-64.png" class="share-img">
+                    <img src="assets/img/icons/icons8-connect-64.png" class="share-img">
 
                     Share</a>
             </section>
